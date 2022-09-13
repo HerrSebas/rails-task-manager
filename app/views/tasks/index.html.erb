@@ -1,7 +1,16 @@
+<div class="container">
 <h1>My tasks</h1>
-<ul>
+
+<div class="list-container">
   <% @tasks.each do |task| %>
-    <li> <%= link_to task.title , task_path(task.id)  %></li>
+  <div class="form-check" id = "form-style">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      <%= link_to task.title , task_path(task.id)  %>
+    </label>
+  </div>
   <% end %>
-</ul>
+</div>
+
 <%= link_to 'Add task' , tasks_new_path  %></li>
+</div>
